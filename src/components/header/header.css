@@ -21,7 +21,7 @@ header {
 
 /* ==== HEADER MÍDIAS SOCIAIS ====*/
 
-.header__socials {
+.header__midias__sociais {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,7 @@ header {
     bottom: 3rem;
 }
 
-.header__socials::after {
+.header__midias__sociais::after {
     content: "";
     width: 1px;
     height: 2rem;
@@ -63,7 +63,7 @@ padding: 6rem 1.5rem 1.5rem 1.5rem;
     font-size: 0.9rem;
 }
 
-/* ===== CONSULTAS DE MÍDIA - MÉDIO ======*/
+/* ===== CONSULTAS DE MÍDIA - DISPOSITIVO MÉDIO ======*/
 
 @media screen  and (max-width: 1024px) {
     header {
@@ -71,13 +71,13 @@ padding: 6rem 1.5rem 1.5rem 1.5rem;
     }    
 }
 
-/* ===== CONSULTAS DE MÍDIA - PEQUENO ======*/
+/* ===== CONSULTAS DE MÍDIA - DISPOSITIVO PEQUENO ======*/
 
 @media screen  and (max-width: 600px) {
     header {
         height: 100vh;
     } 
-    .header__socials,
+    .header__midias__sociais,
     .scroll__down {
         display: none;
     }

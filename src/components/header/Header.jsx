@@ -2,7 +2,7 @@ import React from 'react'
 import './header.css'
 import CTA from './CTA'
 import SOBRE from '../../assets/sobre.png'
-import HeaderSocials from './HeaderSocials'
+import HeaderMidiasSociais from './HeaderMidiasSociais'
 
 const Header = () => {
   return (
@@ -16,12 +16,12 @@ const Header = () => {
         <h5 className="text-light">Rápido, fácil e acessível a todos</h5>
 
         <CTA />
-        <HeaderSocials />
+        <HeaderMidiasSociais />
 
         <div className="sobre">
           <img src={SOBRE} alt="sobre" />
         </div>
-        <a href="#contact" className='scroll__down'>Rolar para baixo</a>
+        <a href="#contatos" className='scroll__down'>Rolar para baixo</a>
         </div>  
     </header>
   )
