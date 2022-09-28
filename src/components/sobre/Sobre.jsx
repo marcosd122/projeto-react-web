@@ -1,6 +1,6 @@
 import React from 'react'
-import './sobre.css';
-import PROJ from '../../assets/sobre.jpg';
+import './sobre.css'
+import PROJ from '../../assets/sobre.jpg'
 import {GiBookshelf} from 'react-icons/gi'
 import {RiUploadCloudFill} from 'react-icons/ri'
 import {FaAward} from 'react-icons/fa'
@@ -12,15 +12,15 @@ const Sobre = () => {
       <h5>Conheça o projeto</h5>
       <h2>Sobre nós</h2>
 
-      <div className="container sobre__container">
-        <div className="sobre__projeto">
-          <div className="sobre__projeto-imagem">
-            <img src={PROJ} alt="Projeto Imagem" />
+      <div className='container sobre__container'>
+        <div className='sobre__projeto'>
+          <div className='sobre__projeto-imagem'>
+            <img src={PROJ} alt='Projeto Imagem' />
           </div>
         </div>
 
-        <div className="sobre__conteudo">
-          <div className="sobre__cards">
+        <div className='sobre__conteudo'>
+          <div className='sobre__cards'>
 
             <article className='sobre__card'>
               <GiBookshelf className='sobre__icones'/>
@@ -34,7 +34,7 @@ const Sobre = () => {
               <small>Atualização de conteúdo de publicações e digitalizações feitas por alunos</small>
             </article>
 
-            <article className="sobre__card">
+            <article className='sobre__card'>
               <FaAward className='sobre__icones'/>
               <h5>Recompensas</h5>
               <small>Acumule pontos de leitura e troque por acesso antecipado a conteúdos em primeira mão</small>
@@ -44,12 +44,12 @@ const Sobre = () => {
 
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi minus eveniet necessitatibus, at corporis dignissimos in! Quod, ad earum, voluptates vero, cupiditate vitae recusandae incidunt quae quia fuga alias est?</p>
 
-          <a href="#contatos" className='btn btn-primary'>Entre em contato</a>
+          <a href='#contatos' className='btn btn-primary'>Entre em contato</a>
 
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Sobre;
+export default Sobre

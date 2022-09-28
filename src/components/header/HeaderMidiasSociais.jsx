@@ -8,9 +8,9 @@ import {BsInstagram} from 'react-icons/bs'
 const HeaderMidiasSociais = () => {
   return (
     <div className='header__midias__sociais'>
-        <a href="https://www.facebook.com/ifrondonia/" target="_blank"><BsFacebook/></a>
-        <a href="https://github.com/IFRO" target="_blank"><FaGithub/></a>
-        <a href="https://www.instagram.com/ifro_oficial/" target="_blank"><BsInstagram/></a>
+        <a href='https://www.facebook.com/ifrondonia/' target='_blank'><BsFacebook/></a>
+        <a href='https://github.com/IFRO' target='_blank'><FaGithub/></a>
+        <a href='https://www.instagram.com/ifro_oficial/' target='_blank'><BsInstagram/></a>
     </div>
   )
 }
