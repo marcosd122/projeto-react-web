@@ -18,15 +18,15 @@
   place-items: center;
 }
 
-.sobre__sobre-imagem {
+.sobre__projeto-imagem {
   border-radius: 2rem;
   overflow: hidden;
   transform: rotate(10deg);
   transition: var(--transition);
 }
 
-.sobre__sobre-imagem:hover {
-  transform: rotate(0deg);
+.sobre__projeto-imagem:hover {
+  transform: rotate(0);
 }
 
 .sobre__cards {
@@ -41,6 +41,7 @@
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  transition: var(--transition);
 }
 
 .sobre__card:hover {
@@ -49,7 +50,7 @@
   cursor: default;
 }
 
-.sobre__icon {
+.sobre__icones {
   color: var(--color-primary);
   font-size: 1.4rem;
   margin-bottom: 1rem;

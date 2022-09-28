@@ -1,0 +1,72 @@
+.objetivos__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.objetivos__container > div {
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.objetivos__container > div:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.objetivos__container > div h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.objetivos__conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+}
+
+.objetivos__detalhes {
+  display: flex;
+  gap: 1rem;
+}
+
+.objetivos__detalhes-icones {
+  margin-top: 6px;
+  color: var(--color-primary);
+}
+
+/* ===== CONSULTAS DE MÍDIA - DISPOSITIVO MÉDIO ======*/
+
+@media screen and (max-width: 1024px) {
+    .objetivos__container {
+        grid-template-columns: 1fr;
+    }
+
+    .objetivos__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .objetivos__conteudo {
+        padding: 1rem;
+    }
+}
+
+/* ===== CONSULTAS DE MÍDIA - DISPOSITIVO PEQUENO ======*/
+
+@media screen and (max-width: 600px) {
+    .objetivos__container {
+        gap: 1rem;
+    }
+
+    .objetivos__container {        
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
