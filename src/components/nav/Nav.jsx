@@ -3,9 +3,9 @@ import React from 'react'
 import './nav.css'
 import  {AiOutlineHome} from 'react-icons/ai'
 import  {AiOutlineUser} from 'react-icons/ai'
-import  {BiBook} from 'react-icons/bi'
-import  {RiServiceLine} from 'react-icons/ri'
-import  {BiMessageSquareDetail} from 'react-icons/bi'
+import  {GiStairsGoal} from 'react-icons/gi'
+import  {HiOutlineClipboardList} from 'react-icons/hi'
+import  {BiMailSend} from 'react-icons/bi'
 import {useState} from 'react'
 
 
@@ -17,9 +17,9 @@ const Nav = () => {
       <a href="#" onClick={() => setActiveNav('#')}
       className={activeNav === '#' ? 'active' : ''}><AiOutlineHome/></a> 
       <a href="#sobre" onClick={() => setActiveNav('#sobre')} className={activeNav === '#sobre' ? 'active' : ''}><AiOutlineUser/></a>
-      <a href="#objetivos" onClick={() => setActiveNav('#experiencia')} className={activeNav === '#experiencia' ? 'active' : ''}><BiBook/></a>
-      <a href="#servicos" onClick={() => setActiveNav('#servicos')} className={activeNav === '#servicos' ? 'active' : ''}><RiServiceLine/></a>
-      <a href="#contatos"onClick={() => setActiveNav('#contatos')} className={activeNav === '#contatos' ? 'active' : ''}><BiMessageSquareDetail/></a>
+      <a href="#objetivos" onClick={() => setActiveNav('#objetivos')} className={activeNav === '#objetivos' ? 'active' : ''}><GiStairsGoal/></a>
+      <a href="#atividades" onClick={() => setActiveNav('#atividades')} className={activeNav === '#atividades' ? 'active' : ''}><HiOutlineClipboardList/></a>
+      <a href="#contatos"onClick={() => setActiveNav('#contatos')} className={activeNav === '#contatos' ? 'active' : ''}><BiMailSend/></a>
     </nav>
   )
 }

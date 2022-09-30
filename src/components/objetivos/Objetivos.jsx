@@ -7,101 +7,101 @@ const Objetivos = () => {
 
     <section id='objetivos'>
 
-      <h5>União de esforços</h5>
+      <h5>Estrutura e condução da aplicação</h5>
       <h2>Objetivos para o projeto</h2>
 
       <div className='container objetivos__container'>
         <div className='objetivos__projeto'>
-          <h3>Objetivos</h3>
+          <h3>Objetivos - Soft Skills</h3>
 
           <div className='objetivos__conteudo'>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Objetivos1</h4>
-                <small className='text-light'>Objetivos1</small>
+                <h4>Trabalho em equipe</h4>
+                <small className='text-light'>Um ambiente colaborativo.</small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Objetivos2</h4>
-                <small className='text-light'>Objetivos2</small>
+                <h4>Criatividade</h4>
+                <small className='text-light'>Produzir algo novo e diferente.</small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Objetivos3</h4>
-                <small className='text-light'>Objetivos3</small>
+                <h4>Organização</h4>
+                <small className='text-light'>Cumprir objetivos em ordem.</small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Objetivos4</h4>
-                <small className='text-light'>Objetivos4</small>
+                <h4>Adaptabilidade</h4>
+                <small className='text-light'>Acompanhar as mudanças.</small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Objetivos5</h4>
-                <small className='text-light'>Objetivos5</small>
+                <h4>Negociação</h4>
+                <small className='text-light'>Forma mais eficiente para alcançar um objetivo.</small>
               </div>
             </article>
           </div>
         </div>
 
-        {/* FIM DA AREA OBJETIVOS  */}
+        {/* FIM DA AREA OBJETIVOS SOFT */}
 
         <div className='objetivos__ferramentas'>
-          <h3>Ferramentas</h3>
+          <h3>Objetivos - Hard Skills</h3>
 
           <div className='objetivos__conteudo'>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Ferramentas1</h4>
-                <small className='text-light'>Ferramentas1</small>
+                <h4>HTML + CSS</h4>
+                <small className='text-light'>Criação de interfaces de usuário</small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Ferramentas2</h4>
-                <small className='text-light'>Ferramentas2</small>
+                <h4>JSX</h4>
+                <small className='text-light'>Sintaxe para JavaScript </small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Ferramentas3</h4>
-                <small className='text-light'>Ferramentas3</small>
+                <h4>JavaScript ES6</h4>
+                <small className='text-light'>Padronização da linguagem JS </small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Ferramentas4</h4>
-                <small className='text-light'>Ferramentas4</small>
+                <h4>Git</h4>
+                <small className='text-light'>Repositório armazenado no GitHub</small>
               </div>
             </article>
 
             <article className='objetivos__detalhes'>
               <BsPatchCheckFill className='objetivos__detalhes-icones' />
               <div>
-                <h4>Ferramentas5</h4>
-                <small className='text-light'>Ferramentas5</small>
+                <h4>UX/UI</h4>
+                <small className='text-light'>UI - design de interface / UX - experiência de interações</small>
               </div>
             </article>
 

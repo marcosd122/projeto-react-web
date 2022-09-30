@@ -1,6 +1,6 @@
 import React from 'react'
 import './sobre.css'
-import PROJ from '../../assets/sobre.jpg'
+import PROJ from '../../assets/projeto.jpg'
 import {GiBookshelf} from 'react-icons/gi'
 import {RiUploadCloudFill} from 'react-icons/ri'
 import {FaAward} from 'react-icons/fa'
@@ -42,7 +42,10 @@ const Sobre = () => {
            
           </div>
 
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi minus eveniet necessitatibus, at corporis dignissimos in! Quod, ad earum, voluptates vero, cupiditate vitae recusandae incidunt quae quia fuga alias est?</p>
+          <p>Fabio Saacedra Marcelo e Marcos Guimarães ambos alunos do curso de Análise e
+            Desenvolvimento de Sistemas 4 período. Trabalharam no projeto desenvolvido para
+            a disciplina de Programação Web ministrada pelo professor Leandro Ferrarezi com 
+            o Desenvolvimento de uma página Web para leitura de quadrinhos</p>
 
           <a href='#contatos' className='btn btn-primary'>Entre em contato</a>
 
