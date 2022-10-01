@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
+/* eslint-disable no-undef */
+
 import React from 'react'
 import './biblioteca.css'
 import IMG1 from '../../assets/biblioteca1.png'
@@ -8,6 +10,51 @@ import IMG4 from '../../assets/biblioteca4.png'
 import IMG5 from '../../assets/biblioteca5.png'
 import IMG6 from '../../assets/biblioteca6.png'
 
+
+const data = [
+  {
+id: 1,
+imagem: IMG1,
+titulo: 'Batman',
+biblioteca: 'https://github.com/',
+detalhes:'https://ifro.edu.br/'
+},
+{
+id: 2,
+imagem: IMG2,
+titulo: 'Superman',
+biblioteca: 'https://github.com/',
+detalhes:'https://ifro.edu.br/'
+},
+{
+id: 3,
+imagem: IMG3,
+titulo: 'Turma da Mônica',
+biblioteca: 'https://github.com/',
+detalhes:'https://ifro.edu.br/'
+},
+{
+id: 4,
+imagem: IMG4,
+titulo: 'Disney',
+biblioteca: 'https://github.com/',
+detalhes:'https://ifro.edu.br/'
+},
+{
+id: 5,
+imagem: IMG5,
+titulo: 'Mangás',
+biblioteca: 'https://github.com/',
+detalhes:'https://ifro.edu.br/'
+},
+{
+id: 6,
+imagem: IMG6,
+titulo: 'Marvel',
+biblioteca: 'https://github.com/',
+detalhes:'https://ifro.edu.br/'
+}
+]
 
 const Biblioteca= () => {
   return (
@@ -19,119 +66,31 @@ const Biblioteca= () => {
 
       <div className='container biblioteca__container'>
 
-        <article className='biblioteca__item'>
+     {
+      data.map(({id, imagem, titulo, biblioteca, detalhes}) => {
+        return (
+
+        <article key={id} className='biblioteca__item'>
 
         <div className='biblioteca__item-imagem'>
-
-          <img src={IMG1} alt={""} />
-
+        
+          <img src={imagem} alt={titulo} />
+        
           </div>
-
-          <h3>Confira a lista de itens dentro do nosso acervo</h3>
+        
+          <h3>{titulo}</h3>
           
           <div className="biblioteca__item-cta">
-
-          <a href="https://github.com/" className='btn' target='_blank'>GitHub</a>
-          <a href="https://dribbble.com/" className='btn btn-primary' target='_blank'>Demo</a>          
+        
+          <a href={biblioteca} className='btn' target='_blank'>Biblioteca</a>
+          <a href={detalhes} className='btn btn-primary' target='_blank'>Detalhes</a>          
         
           </div>
         
         </article> 
-
-        <article className='biblioteca__item'>
-
-<div className='biblioteca__item-imagem'>
-
-  <img src={IMG1} alt={""} />
-
-  </div>
-
-  <h3>Confira a lista de itens dentro do nosso acervo</h3>
-  
-  <div className="biblioteca__item-cta">
-
-  <a href="https://github.com/" className='btn' target='_blank'>GitHub</a>
-  <a href="https://dribbble.com/" className='btn btn-primary' target='_blank'>Demo</a>          
-
-  </div>
-
-</article> 
-
-<article className='biblioteca__item'>
-
-<div className='biblioteca__item-imagem'>
-
-  <img src={IMG1} alt={""} />
-
-  </div>
-
-  <h3>Confira a lista de itens dentro do nosso acervo</h3>
-  
-  <div className="biblioteca__item-cta">
-
-  <a href="https://github.com/" className='btn' target='_blank'>GitHub</a>
-  <a href="https://dribbble.com/" className='btn btn-primary' target='_blank'>Demo</a>          
-
-  </div>
-
-</article> 
-
-<article className='biblioteca__item'>
-
-<div className='biblioteca__item-imagem'>
-
-  <img src={IMG1} alt={""} />
-
-  </div>
-
-  <h3>Confira a lista de itens dentro do nosso acervo</h3>
-  
-  <div className="biblioteca__item-cta">
-
-  <a href="https://github.com/" className='btn' target='_blank'>GitHub</a>
-  <a href="https://dribbble.com/" className='btn btn-primary' target='_blank'>Demo</a>          
-
-  </div>
-
-</article> 
-
-<article className='biblioteca__item'>
-
-<div className='biblioteca__item-imagem'>
-
-  <img src={IMG1} alt={""} />
-
-  </div>
-
-  <h3>Confira a lista de itens dentro do nosso acervo</h3>
-  
-  <div className="biblioteca__item-cta">
-
-  <a href="https://github.com/" className='btn' target='_blank'>GitHub</a>
-  <a href="https://dribbble.com/" className='btn btn-primary' target='_blank'>Demo</a>          
-
-  </div>
-
-</article> 
-
-<article className='biblioteca__item'>
-
-<div className='biblioteca__item-imagem'>
-
-  <img src={IMG1} alt={""} />
-
-  </div>
-
-  <h3>Confira a lista de itens dentro do nosso acervo</h3>
-  
-  <div className="biblioteca__item-cta">
-
-  <a href="https://github.com/" className='btn' target='_blank'>GitHub</a>
-  <a href="https://dribbble.com/" className='btn btn-primary' target='_blank'>Demo</a>          
-
-  </div>
-
-</article> 
+      )
+      })
+     }      
 
       </div>
     </section>
