@@ -19,7 +19,7 @@ const Header = () => {
         <HeaderMidiasSociais />
 
         <div className='sobre'>
-          <img src={SOBRE} alt='sobre' />
+          <img src={SOBRE} alt='Sobre a equipe' />
         </div>
         <a href='#contatos' className='scroll__down'>Rolar para baixo</a>
         </div>  

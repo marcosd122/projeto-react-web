@@ -8,9 +8,11 @@ import Biblioteca from './components/biblioteca/Biblioteca'
 import Depoimentos from './components/depoimentos/Depoimentos'
 import Contatos from './components/contatos/Contatos'
 import Footer from './components/footer/Footer'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 
 const App = () => {
+  
   return (
     <>
       <Header />
@@ -18,12 +20,16 @@ const App = () => {
       <Sobre />
       <Objetivos />
       <Atividades />
-      <Biblioteca />
+      <Biblioteca />      
       <Depoimentos />
       <Contatos />
       <Footer />
+      
     </>
   )
 }
 
 export default App
+
+
+

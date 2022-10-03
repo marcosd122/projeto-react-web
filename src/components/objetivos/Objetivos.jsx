@@ -12,6 +12,7 @@ const Objetivos = () => {
 
       <div className='container objetivos__container'>
         <div className='objetivos__projeto'>
+          
           <h3>Objetivos - Soft Skills</h3>
 
           <div className='objetivos__conteudo'>
