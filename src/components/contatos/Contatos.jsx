@@ -40,7 +40,7 @@ const Contatos = () => {
 
         </div>
 
-        {/* FIM DA AREA CONTATOS */}
+        {/* FIM DA AREA - CONTATOS */}
 
         <form action="">
           <input type="texto" name='nome' placeholder='Seu nome completo' required />
