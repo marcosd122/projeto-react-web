@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import './modal.css'
 
 // https://mdbootstrap.com/docs/react/components/modal/
+
 // Uso do componente bootstrap para criação do Modal/
 
 
@@ -11,9 +12,9 @@ export default class Model extends Component {
   render() {
     let modelStyle = {
         display: 'block',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-     
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',     
   }
+  
     return (
       
 <div class="modal show fade" style={modelStyle}>

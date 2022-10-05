@@ -27,6 +27,7 @@ const data =  [
       nome: 'João - Meu pai',
       review:'Site bonito, mas cadê a internet?? É so clicar na bola vermelha, amarela, verde e azul?.',
     },
+    
   ]
 
 export default data;

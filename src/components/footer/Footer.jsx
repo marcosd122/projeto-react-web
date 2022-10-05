@@ -22,13 +22,13 @@ const Footer = () => {
       <li><a href='#biblioteca'>Biblioteca</a></li>
       <li><a href='#depoimentos'>Depoimentos</a></li>
       <li><a href='#contatos'>Contatos</a></li>     
-            
+           
       </ul>
 
       <div className='footer__midias-sociais'>
-      <a href='https://facebook.com/'><FaFacebookF/></a>
-      <a href='https://instagram.com/'><FiInstagram/></a>
-      <a href='https://twitter.com/Comics_Ads'><IoLogoTwitter/></a>      
+      <a href='https://facebook.com/' target='_blank'><FaFacebookF/></a>
+      <a href='https://instagram.com/' target='_blank'><FiInstagram/></a>
+      <a href='https://twitter.com/Comics_Ads' target='_blank'><IoLogoTwitter/></a>      
       </div>
       <div className='footer__pesquisa'>
       <a href='https://docs.google.com/forms/d/1Zmy8Gy5wNsBo3p75yvGCyOA5w_ujdL9pX1LXzGOp_80/viewform?edit_requested=true' target='_blank'>Participe da nossa pesquisa</a>

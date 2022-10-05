@@ -10,8 +10,15 @@ import {BsWhatsapp} from 'react-icons/bs'
 import { useRef } from 'react';
 import emailjs from 'emailjs-com'
 
+//https://www.emailjs.com/docs/examples/reactjs/
+// Biblioteca emailjs utilizada no projeto
+
+//https://dashboard.emailjs.com/admin
+// Dashboard de controle de e-emails
+
 
 const Contatos = () => {
+  
 const form = useRef();
 const sendEmail = (e) => {
   e.preventDefault();
@@ -40,14 +47,14 @@ const sendEmail = (e) => {
           <article className="contato__opcao">
             <MdOutlineEmail className='contato__opcao-icones'/>
             <h4>E-mail</h4>
-            <h5>ifrocalama@ifro.edu.br</h5>
-            <a href="mailto:progweb.fundamentos@gmail.com" target="_blank">Enviar uma mensagem</a>
+            <h5>comics.ads.ifro@gmail.com</h5>
+            <a href="mailto:comics.ads.ifro@gmail.com" target="_blank">Enviar uma mensagem</a>
           </article>
 
           <article className="contato__opcao">
             <RiMessengerLine className='contato__opcao-icones'/>
             <h4>Messenger</h4>
-            <h5>Instituto Federal de Rondônia</h5>
+            <h5>Facebook - Comics ADS</h5>
             <a href="https://m.me/ifrondonia" target="_blank">Enviar uma mensagem</a>
           </article>
 

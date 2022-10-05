@@ -1,7 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable no-undef */
 
-
 import React, {useState} from 'react'
 import './biblioteca.css'
 import data from '../modal/data'
@@ -62,6 +61,8 @@ const Biblioteca= () => {
     </section>
 
 {
+  // === Valor e tipo igual a
+
   model === true ? <Model imagem={tempdata[1]} titulo={tempdata[2]} detalhes={tempdata[3]} hide={() => setModel(false)}/>:''
 }
     
