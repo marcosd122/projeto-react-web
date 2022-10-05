@@ -1,14 +1,34 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable no-undef */
+// eslint-disable-next-lin
 
 import React from 'react'
 import './contatos.css'
 import {MdOutlineEmail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp} from 'react-icons/bs'
+import { useRef } from 'react';
+import emailjs from 'emailjs-com'
 
 
 const Contatos = () => {
+const form = useRef();
+const sendEmail = (e) => {
+  e.preventDefault();
+
+  emailjs.sendForm('service_w44np3l', 'template_rzk3z1z', form.current, '21JfmajranFN9xTnR')
+  
+
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+
+    e.target.reset()
+};
+
+
   return (
     <section id='contatos'>
       <h5>Entre em contato</h5>
@@ -42,7 +62,7 @@ const Contatos = () => {
 
         {/* FIM DA AREA - CONTATOS */}
 
-        <form action="">
+        <form ref={form} onSubmit={sendEmail}>
           <input type="texto" name='nome' placeholder='Seu nome completo' required />
           <input type="email" name='email' placeholder='Seu E-mail' required/>
           <textarea name="mensagem" rows="7" placeholder='Sua mensagem' required></textarea>

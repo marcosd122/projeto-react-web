@@ -12,13 +12,13 @@
 }
 
 :root{
-    --color-bg: #081c42;
-    --color-bg-variant: #2c2c6c;
-    --color-primary: #4db5ff;
+    --color-bg: #030e22;
+    --color-bg-variant: #202056;
+    --color-primary: #4d9fdb;
     --color-secondary: #6bcffa;
     --color-primary-variant: rgba(77,181,255,0.4);
     --color-white: #fff;
-    --color-light:rgba(255,255,255,0.6);
+    --color-light:rgba(255, 255, 255, 0.8);
 
     --transition: all 400ms ease;
 

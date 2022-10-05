@@ -4,9 +4,11 @@ import CTA from './CTA'
 import SOBRE from '../../assets/sobre.png'
 import HeaderMidiasSociais from './HeaderMidiasSociais'
 
+
 const Header = () => {
   return (
     <header>
+      
       <div className='container header__container'>
         
         <h5>Seja Bem-Vindo</h5>
