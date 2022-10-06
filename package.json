@@ -27,10 +27,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -51,5 +52,7 @@
   },
   "devDependencies": {
     "typescript": "^4.8.4"
-  }
+  },
+  "proxy": "http://localhost:8000"
+
 }
