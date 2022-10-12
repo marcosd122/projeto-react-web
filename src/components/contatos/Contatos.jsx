@@ -44,7 +44,7 @@ const sendEmail = (e) => {
       <div className="container contato__container">
         <div className="contato_opcoes">
 
-          <article className="contato__opcao">
+        <article className="contato__opcao">
             <MdOutlineEmail className='contato__opcao-icones'/>
             <h4>E-mail</h4>
             <h5>comics.ads.ifro@gmail.com</h5>
@@ -64,7 +64,7 @@ const sendEmail = (e) => {
             <h5>+123456789</h5>
             <a href="https://api.whatsApp.com/send?phone=69992510764" target="_blank">Enviar uma mensagem</a>
           </article>
-
+          
         </div>
 
         {/* FIM DA AREA - CONTATOS */}
