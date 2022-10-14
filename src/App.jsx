@@ -14,6 +14,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 const App = () => {
   
   return (
+    
     <>
       <Header />
       <Nav />
@@ -26,6 +27,7 @@ const App = () => {
       <Footer />
                   
     </>
+    
   )
 }
 
