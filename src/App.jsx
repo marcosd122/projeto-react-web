@@ -31,5 +31,9 @@ const App = () => {
 
 export default App
 
+/*npx create-react-app my-app
+code
+*/ 
+
 
 

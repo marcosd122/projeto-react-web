@@ -1,8 +1,10 @@
 .objetivos__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; 
   gap: 2rem;
 }
+
+/*A unidade fr representa uma fração do espaço disponível no container do grid*/
 
 .objetivos__container > div {
   background: var(--color-bg-variant);

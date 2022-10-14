@@ -55,7 +55,7 @@ const sendEmail = (e) => {
             <RiMessengerLine className='contato__opcao-icones'/>
             <h4>Messenger</h4>
             <h5>Facebook - Comics ADS</h5>
-            <a href="https://m.me/ifrondonia" target="_blank">Enviar uma mensagem</a>
+            <a href="https://m.me/ComicsADS" target="_blank">Enviar uma mensagem</a>
           </article>
 
           <article className="contato__opcao">

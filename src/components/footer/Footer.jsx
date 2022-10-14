@@ -26,8 +26,8 @@ const Footer = () => {
       </ul>
 
       <div className='footer__midias-sociais'>
-      <a href='https://facebook.com/' target='_blank'><FaFacebookF/></a>
-      <a href='https://instagram.com/' target='_blank'><FiInstagram/></a>
+      <a href='https://www.facebook.com/ComicsADS' target='_blank'><FaFacebookF/></a>
+      <a href='https://www.instagram.com/ads.ifro.comics/' target='_blank'><FiInstagram/></a>
       <a href='https://twitter.com/Comics_Ads' target='_blank'><IoLogoTwitter/></a>      
       </div>
       <div className='footer__pesquisa'>
