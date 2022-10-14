@@ -24,7 +24,7 @@ const App = () => {
       <Depoimentos />
       <Contatos />
       <Footer />
-      
+                  
     </>
   )
 }

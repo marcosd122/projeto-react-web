@@ -43,7 +43,7 @@ const Biblioteca= () => {
             
             <div className="biblioteca__item-cta">
             
-            <a href={item.biblioteca} className='btn' target='_blank'>Biblioteca</a>
+            <a href={item.biblioteca} className='btn'  target='_blank'>Biblioteca</a>
             
             <button className='btn btn-primary' 
             onClick={()=> getData(item.imgLogo, item.titulo, item.detalhes)}
