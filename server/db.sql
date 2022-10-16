@@ -1,1 +1,1 @@
-SELECT * FROM db.comics;
+SELECT * FROM db.cadastro;

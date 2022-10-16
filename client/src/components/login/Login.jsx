@@ -3,7 +3,7 @@
 // eslint-disable-next-line
 
 
-import React from "react";
+import React, {useState} from "react";
 import * as Componente from "./Componente.jsx";
 import "./login.css";
 import { Link } from "react-router-dom";
@@ -11,10 +11,45 @@ import { IoMdArrowBack } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGoogle } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
+import Axios from 'axios'
 
 
 function Login() {
+  
   const [entrar, toggle] = React.useState(true);
+
+  const [UsuarioNomeReg, setUsuarioNomeReg] = useState('')
+  const [UsuarioEmailReg, setUsuarioEmailReg] = useState('')
+  const [UsuarioSenhaReg, setUsuarioSenhaReg] = useState('')
+
+  const [UsuarioEmailLog, setUsuarioEmailLog] = useState('')
+  const [UsuarioSenhaLog, setUsuarioSenhaLog] = useState('')
+
+  
+// const submit = (e) => {  
+//   e.target.reset()
+// };
+
+  const registro = () => {
+    Axios.post('http://localhost:3001/registro', {
+      usuarioNome: UsuarioNomeReg,
+      usuarioEmail: UsuarioEmailReg,
+      usuarioSenha: UsuarioSenhaReg,
+    }).then((response) => {
+      console.log(response)
+    })   
+  }
+
+  const login = () => {
+    Axios.post('http://localhost:3001/login', {      
+      usuarioEmail: UsuarioEmailLog,
+      usuarioSenha: UsuarioSenhaLog,
+    }).then((response) => {
+      console.log(response)
+    })   
+  }
+
+
   return (
 
     <div className="container__login">
@@ -27,11 +62,17 @@ function Login() {
         <Componente.Inscrever_se_Container login={entrar}>
         
           <Componente.Form>
+
             <Componente.Titulo>Criar uma conta</Componente.Titulo>
-            <Componente.Input type="nome" placeholder="Nome" />
-            <Componente.Input type="email" placeholder="E-mail" />
-            <Componente.Input type="senha" placeholder="Senha" /> 
-            <Componente.Button>Inscrever-se</Componente.Button>
+
+            <Componente.Input type="nome" onChange={(e) => {
+              setUsuarioNomeReg(e.target.value) (e.target.reset)}} placeholder="Nome" />
+            <Componente.Input type="email" onChange={(e) => {
+              setUsuarioEmailReg(e.target.value) (e.target.reset)}} placeholder="E-mail" />
+            <Componente.Input type="senha" onChange={(e) => {
+              setUsuarioSenhaReg(e.target.value) (e.target.reset)}} placeholder="Senha" />                       
+
+            <Componente.Button onClick={registro}>Inscrever-se</Componente.Button>
             
 
             <div class="login_midias_sociais">
@@ -53,8 +94,13 @@ function Login() {
         <Componente.EntrarContainer login={entrar}>
           <Componente.Form>
             <Componente.Titulo>Entrar</Componente.Titulo>
-            <Componente.Input type="email" placeholder="E-mail" />
-            <Componente.Input type="senha" placeholder="Senha" />
+            <Componente.Input type="email" placeholder="E-mail" 
+            onChange={(e) => {setUsuarioEmailLog(e.target.value)}}/>
+            <Componente.Input type="senha" placeholder="Senha" 
+            onChange={(e) => {setUsuarioSenhaLog(e.target.value)}}/>        
+
+            <Componente.Button onClick={login}>Entrar</Componente.Button>
+
             <Componente.Anchor href="# ">Esqueceu sua senha?</Componente.Anchor>
 
             <div class="login_midias_sociais">
@@ -69,7 +115,6 @@ function Login() {
               </a>
             </div>
 
-            <Componente.Button>Entrar</Componente.Button>
           </Componente.Form>
         </Componente.EntrarContainer>
 
@@ -110,3 +155,15 @@ function Login() {
 }
 
 export default Login;
+
+/*
+
+- Biblioteca styled-componente
+
+- Biblioteca Axios
+
+É um cliente HTTP baseado em Promises para fazer requisições.
+Pode ser utilizado tanto no navegador quanto no Node. js ou qualquer serviço de API.
+
+
+*/

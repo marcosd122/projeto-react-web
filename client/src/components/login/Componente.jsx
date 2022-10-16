@@ -8,7 +8,7 @@ import styled from 'styled-components';
  overflow: hidden;
  width: 650px;
  max-width: 100%;
- min-height: 510px;
+ min-height: 530px;
  `;
 
  export const Inscrever_se_Container = styled.div`
@@ -56,8 +56,10 @@ import styled from 'styled-components';
  margin: 0;
  `;
  
- export const Input = styled.input`
- background-color: #eee;
+ export const Input = styled.input` 
+ background-color: #eee; 
+ color:#030b1b;
+ font-weight: bold;
  border: none;
  padding: 12px 15px;
  margin: 8px 0;
