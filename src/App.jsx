@@ -16,8 +16,7 @@ import Login from "./components/login/Login";
 import Error from "./components/error/Error";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import {
-  BrowserRouter as Router,
-  BrowserRouter ,
+  BrowserRouter as Router,  
   Route,
   Routes,   
 } from "react-router-dom";
@@ -58,7 +57,7 @@ const App = () => {
           <Route exact path="/login" element={<Login />} />
         </Routes>
         <Routes>
-        <Route path="*" component={Error} />
+        <Route exact path='/error' element={<Error />} />
         </Routes>
       </Router>
 
