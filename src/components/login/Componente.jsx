@@ -94,7 +94,8 @@ import styled from 'styled-components';
  text-decoration: none;
  margin: 15px 0;
  `;
- export const OverlayContainer = styled.div`
+ 
+export const OverlayContainer = styled.div`
 position: absolute;
 top: 0;
 left: 50%;

@@ -2,6 +2,7 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line
 
+
 import React from "react";
 import * as Componente from "./Componente.jsx";
 import "./login.css";
@@ -10,6 +11,7 @@ import { IoMdArrowBack } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa";
 import { BsGoogle } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
+
 
 function Login() {
   const [entrar, toggle] = React.useState(true);
@@ -23,15 +25,17 @@ function Login() {
             <Componente.Input type="email" placeholder="E-mail" />
             <Componente.Input type="senha" placeholder="Senha" /> 
             <Componente.Button>Inscrever-se</Componente.Button>
+            
+            
 
             <div class="login_midias_sociais">
-              <a href="#" class="login_midias_sociais-icon">
+              <a href="# " class="login_midias_sociais-icon">
                 <i class="fab fa-facebook-f"><FaFacebookF /></i>
               </a>
-              <a href="#" class="login_midias_sociais-icon">
+              <a href="# " class="login_midias_sociais-icon">
                 <i class="fab fa-google"><BsGoogle /></i>
               </a>
-              <a href="#" class="login_midias_sociais-icon">
+              <a href="# " class="login_midias_sociais-icon">
                 <i class="fab fa-linkedin-in"><IoLogoTwitter /></i>
               </a>
             </div>
@@ -44,16 +48,16 @@ function Login() {
             <Componente.Titulo>Entrar</Componente.Titulo>
             <Componente.Input type="email" placeholder="E-mail" />
             <Componente.Input type="senha" placeholder="Senha" />
-            <Componente.Anchor href="#">Esqueceu sua senha?</Componente.Anchor>
+            <Componente.Anchor href="# ">Esqueceu sua senha?</Componente.Anchor>
 
             <div class="login_midias_sociais">
-              <a href="#" class="login_midias_sociais-icon">
+              <a href="# " class="login_midias_sociais-icon">
                 <i class="fab fa-facebook-f"><FaFacebookF /></i>
               </a>
-              <a href="#" class="login_midias_sociais-icon">
+              <a href="# " class="login_midias_sociais-icon">
                 <i class="fab fa-google"><BsGoogle /></i>
               </a>
-              <a href="#" class="login_midias_sociais-icon">
+              <a href="# " class="login_midias_sociais-icon">                
                 <i class="fab fa-linkedin-in"><IoLogoTwitter /></i>
               </a>
             </div>
