@@ -16,16 +16,22 @@ import { IoLogoTwitter } from "react-icons/io";
 function Login() {
   const [entrar, toggle] = React.useState(true);
   return (
+
     <div className="container__login">
+
+      
+
+
       <Componente.Container>
+      
         <Componente.Inscrever_se_Container login={entrar}>
+        
           <Componente.Form>
             <Componente.Titulo>Criar uma conta</Componente.Titulo>
             <Componente.Input type="nome" placeholder="Nome" />
             <Componente.Input type="email" placeholder="E-mail" />
             <Componente.Input type="senha" placeholder="Senha" /> 
             <Componente.Button>Inscrever-se</Componente.Button>
-            
             
 
             <div class="login_midias_sociais">
@@ -39,7 +45,8 @@ function Login() {
                 <i class="fab fa-linkedin-in"><IoLogoTwitter /></i>
               </a>
             </div>
-            
+        
+
           </Componente.Form>
         </Componente.Inscrever_se_Container>
 
@@ -91,6 +98,8 @@ function Login() {
           </Componente.Overlay>
         </Componente.OverlayContainer>
       </Componente.Container>
+
+ 
 
       <div className="container_link__container">
         <Link to="/" className="btn"><IoMdArrowBack /></Link>

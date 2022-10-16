@@ -15,6 +15,7 @@ import Footer from "./components/footer/Footer";
 import Login from "./components/login/Login";
 import Error from "./components/error/Error";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 import {
   BrowserRouter as Router,  
   Route,
