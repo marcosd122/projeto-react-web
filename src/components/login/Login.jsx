@@ -1,111 +1,61 @@
-import React from 'react'
+import React from "react";
+import * as Componente from './Componente.jsx'
+import './login.css'
 
-function login() {
+function Login() {
+  const [entrar, toggle] = React.useState(true);
   return (
-   <div>
-
-<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-    
-    <title>Sign in & Sign up Form</title>
   
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="#" class="sign-in-form">
-            <h2 class="title">Sign in</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
-        </div>
-      </div>
+    <div className="container__login">
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-            <h3>New here ?</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
-            </p>
-            <button class="btn transparent" id="sign-up-btn">
-              Sign up
-            </button>
-          </div>
-          <img src="img/log.svg" class="image" alt="" />
-        </div>
-        <div class="panel right-panel">
-          <div class="content">
-            <h3>One of us ?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
-            </p>
-            <button class="btn transparent" id="sign-in-btn">
-              Sign in
-            </button>
-          </div>
-          <img src="img/register.svg" class="image" alt="" />
-        </div>
-      </div>
+    <Componente.Container>
+      <Componente.Inscrever_se_Container login={entrar}>
+        <Componente.Form>
+          <Componente.Titulo>Criar uma conta</Componente.Titulo>
+          <Componente.Input type="nome" placeholder="Nome" />
+          <Componente.Input type="email" placeholder="E-mail" />
+          <Componente.Input type="senha" placeholder="Senha" />
+          <Componente.Button>Inscrever-se</Componente.Button>
+        </Componente.Form>
+      </Componente.Inscrever_se_Container>
+
+      <Componente.EntrarContainer login={entrar}>
+        <Componente.Form>
+          <Componente.Titulo>Entrar</Componente.Titulo>
+          <Componente.Input type="email" placeholder="E-mail" />
+          <Componente.Input type="senha" placeholder="Senha" />
+          <Componente.Anchor href="#">Esqueceu sua senha?</Componente.Anchor>
+          <Componente.Button>Entrar</Componente.Button>
+        </Componente.Form>
+      </Componente.EntrarContainer>
+
+      <Componente.OverlayContainer login={entrar}>
+        <Componente.Overlay login={entrar}>
+          <Componente.LeftOverlayPanel login={entrar}>
+            <Componente.Titulo>Bem vindo de volta!</Componente.Titulo>
+            <Componente.Paragraph>
+            Para se manter conectado conosco, faça login com suas informações pessoais
+            </Componente.Paragraph>
+            <Componente.GhostButton onClick={() => toggle(true)}>
+            Entrar
+            </Componente.GhostButton>
+          </Componente.LeftOverlayPanel>
+
+          <Componente.RightOverlayPanel login={entrar}>
+            <Componente.Titulo>Olá amigo!</Componente.Titulo>
+            <Componente.Paragraph>
+            Insira seus dados pessoais e comece a jornada conosco
+            </Componente.Paragraph>
+            <Componente.GhostButton onClick={() => toggle(false)}>
+            Inscreva-se
+            </Componente.GhostButton>
+          </Componente.RightOverlayPanel>
+        </Componente.Overlay>
+      </Componente.OverlayContainer>
+    </Componente.Container>
+
     </div>
-
-    <script src="app.js"></script>
-    
-    </div> 
-  )
+  );
 }
 
-export default login
+export default Login;

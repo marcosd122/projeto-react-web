@@ -1,13 +1,18 @@
 /* eslint-disable react/jsx-no-target-blank */
 /* eslint-disable no-undef */
 
+
 import React, {useState} from 'react'
 import './biblioteca.css'
 import data from '../modal/data'
 import Model from '../modal/Model'
+import { Link } from 'react-router-dom'
+
+
 
 
 const Biblioteca= () => {
+  
   const [model, setModel] = useState(false);
   const [tempdata, setTempdata] = useState([]);
 
@@ -19,6 +24,8 @@ const Biblioteca= () => {
   }
 
   return (
+
+
     <>
     <section id='biblioteca'>
 
@@ -42,8 +49,11 @@ const Biblioteca= () => {
             <h3>{item.titulo}</h3>
             
             <div className="biblioteca__item-cta">
-            
-            <a href={item.biblioteca} className='btn'  target='_blank'>Biblioteca</a>
+         
+
+            <Link to='/login' className='btn' >Biblioteca</Link>
+
+            {/* <a href={item.biblioteca} className='btn'  target='_blank'>Biblioteca</a> */}
             
             <button className='btn btn-primary' 
             onClick={()=> getData(item.imgLogo, item.titulo, item.detalhes)}
@@ -65,8 +75,11 @@ const Biblioteca= () => {
 
   model === true ? <Model imagem={tempdata[1]} titulo={tempdata[2]} detalhes={tempdata[3]} hide={() => setModel(false)}/>:''
 }
-    
+
     </>
+     
+
+    
   )
 }
 
