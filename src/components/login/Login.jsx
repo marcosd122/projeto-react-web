@@ -89,9 +89,8 @@ function Login() {
       </Componente.Container>
 
       <div className="container_link__container">
-        <Link to="/" className="btn">
-          <IoMdArrowBack />
-        </Link>
+        <Link to="/" className="btn"><IoMdArrowBack /></Link>
+
       </div>
     </div>
   );

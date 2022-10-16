@@ -72,6 +72,8 @@ export default App;
 code
 */
 
+/*Para uso de navegação entre telas foi utilizado a biblioteca router-react*/
+
 /* 
 <Header />
 <Nav />
