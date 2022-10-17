@@ -22,13 +22,11 @@ function Login() {
   const [UsuarioEmailReg, setUsuarioEmailReg] = useState('')
   const [UsuarioSenhaReg, setUsuarioSenhaReg] = useState('')
 
+  const [UsuarioNomeLog, setUsuarioNomeLog] = useState('')
   const [UsuarioEmailLog, setUsuarioEmailLog] = useState('')
   const [UsuarioSenhaLog, setUsuarioSenhaLog] = useState('')
 
-  
-// const submit = (e) => {  
-//   e.target.reset()
-// };
+  const [loginStatus, setLoginStatus] = useState('')
 
   const registro = () => {
     Axios.post('http://localhost:3001/registro', {
@@ -40,12 +38,18 @@ function Login() {
     })   
   }
 
-  const login = () => {
-    Axios.post('http://localhost:3001/login', {      
+  const logado = () => {
+    Axios.post('http://localhost:3001/logado', {      
+      usuarioNome: UsuarioNomeLog,
       usuarioEmail: UsuarioEmailLog,
       usuarioSenha: UsuarioSenhaLog,
     }).then((response) => {
-      console.log(response)
+
+      if (response.data.message) {
+      setLoginStatus(response.data.message)
+    } else {
+      setLoginStatus(response.data[0].usuarioNome)
+    }
     })   
   }
 
@@ -54,23 +58,20 @@ function Login() {
 
     <div className="container__login">
 
-      
-
-
       <Componente.Container>
       
-        <Componente.Inscrever_se_Container login={entrar}>
+        <Componente.Inscrever_se_Container Conectar={entrar}>
         
           <Componente.Form>
 
             <Componente.Titulo>Criar uma conta</Componente.Titulo>
 
             <Componente.Input type="nome" onChange={(e) => {
-              setUsuarioNomeReg(e.target.value) (e.target.reset)}} placeholder="Nome" />
+              setUsuarioNomeReg(e.target.value) }} placeholder="Nome" />
             <Componente.Input type="email" onChange={(e) => {
-              setUsuarioEmailReg(e.target.value) (e.target.reset)}} placeholder="E-mail" />
-            <Componente.Input type="senha" onChange={(e) => {
-              setUsuarioSenhaReg(e.target.value) (e.target.reset)}} placeholder="Senha" />                       
+              setUsuarioEmailReg(e.target.value) }} placeholder="E-mail" />
+            <Componente.Input type="password" onChange={(e) => {
+              setUsuarioSenhaReg(e.target.value) }} placeholder="Senha" />                       
 
             <Componente.Button onClick={registro}>Inscrever-se</Componente.Button>
             
@@ -91,15 +92,17 @@ function Login() {
           </Componente.Form>
         </Componente.Inscrever_se_Container>
 
-        <Componente.EntrarContainer login={entrar}>
+        <Componente.EntrarContainer Conectar={entrar}>
           <Componente.Form>
             <Componente.Titulo>Entrar</Componente.Titulo>
+            <Componente.Input type="nome" onChange={(e) => {
+              setUsuarioNomeLog(e.target.value) }} placeholder="Nome" />
             <Componente.Input type="email" placeholder="E-mail" 
             onChange={(e) => {setUsuarioEmailLog(e.target.value)}}/>
-            <Componente.Input type="senha" placeholder="Senha" 
+            <Componente.Input type="password" placeholder="Senha" 
             onChange={(e) => {setUsuarioSenhaLog(e.target.value)}}/>        
 
-            <Componente.Button onClick={login}>Entrar</Componente.Button>
+            <Componente.Button Link to='/acervo'  >Entrar</Componente.Button>
 
             <Componente.Anchor href="# ">Esqueceu sua senha?</Componente.Anchor>
 
@@ -118,9 +121,9 @@ function Login() {
           </Componente.Form>
         </Componente.EntrarContainer>
 
-        <Componente.OverlayContainer login={entrar}>
-          <Componente.Overlay login={entrar}>
-            <Componente.LeftOverlayPanel login={entrar}>
+        <Componente.OverlayContainer Conectar={entrar}>
+          <Componente.Overlay Conectar={entrar}>
+            <Componente.LeftOverlayPanel Conectar={entrar}>
               <Componente.Titulo>Bem vindo de volta!</Componente.Titulo>
               <Componente.Paragraph>
                 Para se manter conectado conosco, faça login com suas
@@ -131,7 +134,7 @@ function Login() {
               </Componente.GhostButton>
             </Componente.LeftOverlayPanel>
 
-            <Componente.RightOverlayPanel login={entrar}>
+            <Componente.RightOverlayPanel Conectar={entrar}>
               <Componente.Titulo>Olá amigo!</Componente.Titulo>
               <Componente.Paragraph>
                 Insira seus dados pessoais e comece a jornada conosco
@@ -144,12 +147,13 @@ function Login() {
         </Componente.OverlayContainer>
       </Componente.Container>
 
- 
-
       <div className="container_link__container">
-        <Link to="/" className="btn"><IoMdArrowBack /></Link>
+        <Link to={"/"} className="btn"><IoMdArrowBack /></Link>
 
       </div>
+
+      <h1>{loginStatus}</h1>
+
     </div>
   );
 }
