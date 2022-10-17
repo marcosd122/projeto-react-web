@@ -6,7 +6,7 @@ import {RiUploadCloudFill} from 'react-icons/ri'
 import {FaAward} from 'react-icons/fa'
 
 
-const Sobre = () => {
+export const Sobre = () => {
   return (
     <section id='sobre'>
       <h5>Conheça o projeto</h5>

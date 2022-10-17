@@ -5,7 +5,7 @@ import SOBRE from '../../assets/sobre.png'
 import HeaderMidiasSociais from './HeaderMidiasSociais'
 
 
-const Header = () => {
+export const Header = () => {
   return (
     <header>
       

@@ -13,20 +13,24 @@ import Depoimentos from "./components/depoimentos/Depoimentos";
 import Contatos from "./components/contatos/Contatos";
 import Footer from "./components/footer/Footer";
 import Login from "./components/login/Login";
+import Acervo from "./components/acervo/Acervo";
 import Error from "./components/error/Error";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import {
   BrowserRouter as Router,  
   Route,
-  Routes,   
+  Routes, 
 } from "react-router-dom";
 
+
 const App = () => {
+
   return (
+    
     <>
           <Router>
-      
+
         <Routes>
           <Route exact path="/" element={<Header />} />          
         </Routes>
@@ -55,18 +59,24 @@ const App = () => {
           <Route exact path="/" element={<Footer />} />
         </Routes>
         <Routes>
-          <Route exact path="/login" element={<Login />} />
+          <Route path='/acesso' element={<Login />} />
         </Routes>
-        <Routes>
-        <Route exact path='/error' element={<Error />} />
-        </Routes>
-      </Router>
 
-      
+        <Routes>
+          <Route path='/acervo' element={<Acervo />} />
+        </Routes>
+
+        <Routes>
+        <Route component={Error} />
+        </Routes>
+ 
+      </Router>
+  
     </>
   );
 };
 
+  
 export default App;
 
 /*npx create-react-app my-app
