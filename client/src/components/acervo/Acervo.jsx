@@ -3,7 +3,7 @@ import './acervo.css'
 
 function Acervo() {
   return (
-    <div>Acervo</div>
+    <div>Acervo 1</div>
   )
 }
 
