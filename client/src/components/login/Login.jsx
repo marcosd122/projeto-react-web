@@ -102,7 +102,7 @@ function Login() {
             <Componente.Input type="password" placeholder="Senha" 
             onChange={(e) => {setUsuarioSenhaLog(e.target.value)}}/>        
 
-            <Componente.Button Link to='/acervo'  >Entrar</Componente.Button>
+            <Componente.Button onClick={logado }  >Entrar</Componente.Button>
 
             <Componente.Anchor href="# ">Esqueceu sua senha?</Componente.Anchor>
 
