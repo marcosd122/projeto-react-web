@@ -56,7 +56,15 @@ app.post("/registro", (req, res) => {
   });
 });
 
-app.post("/logado", (req, res) => {
+app.get('/login', (req, res) => {
+  if (req.session.user) {
+    res.send ({logado: true, user: req.session.user})
+  } else {
+    res.send({logado: false})
+  }
+})
+
+app.post("/login", (req, res) => {
   const usuarioNome = req.body.usuarioNome;
   const usuarioEmail = req.body.usuarioEmail;
   const usuarioSenha = req.body.usuarioSenha;
@@ -71,6 +79,8 @@ app.post("/logado", (req, res) => {
       if (result.length > 0) {
         bcrypt.compare(usuarioSenha, result[0].usuarioSenha, (err, response) => {
             if (response) {
+                req.session.user = result
+                console.log(req.session.user)
                 res.send(result)                
             } else {
                 res.send({ message: "E-mail ou senha incorreta!!" });  

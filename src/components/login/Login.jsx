@@ -3,7 +3,7 @@
 // eslint-disable-next-line
 
 
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import * as Componente from "./Componente.jsx";
 import "./login.css";
 import { Link } from "react-router-dom";
@@ -28,6 +28,8 @@ function Login() {
 
   const [loginStatus, setLoginStatus] = useState('')
 
+  // Axios.default.withCredentials = true;
+
   const registro = () => {
     Axios.post('http://localhost:3001/registro', {
       usuarioNome: UsuarioNomeReg,
@@ -38,8 +40,8 @@ function Login() {
     })   
   }
 
-  const logado = () => {
-    Axios.post('http://localhost:3001/logado', {      
+  const login = () => {
+    Axios.post('http://localhost:3001/login', {      
       usuarioNome: UsuarioNomeLog,
       usuarioEmail: UsuarioEmailLog,
       usuarioSenha: UsuarioSenhaLog,
@@ -53,6 +55,13 @@ function Login() {
     })   
   }
 
+  useEffect (() => {
+    Axios.get('http://localhost:3001/login').then((response) => {
+    if (response.data.logado === true) {
+      setLoginStatus(response.data.usuarioNome[0].usuarioNome)
+    }
+  })
+  }, [])
 
   return (
 
@@ -102,7 +111,7 @@ function Login() {
             <Componente.Input type="password" placeholder="Senha" 
             onChange={(e) => {setUsuarioSenhaLog(e.target.value)}}/>        
 
-            <Componente.Button onClick={logado }  >Entrar</Componente.Button>
+            <Componente.Button onClick={login}  >Entrar</Componente.Button>
 
             <Componente.Anchor href="# ">Esqueceu sua senha?</Componente.Anchor>
 

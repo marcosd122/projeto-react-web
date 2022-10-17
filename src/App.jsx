@@ -67,7 +67,7 @@ const App = () => {
         </Routes>
 
         <Routes>
-        <Route component={Error} />
+        <Route exact path="/:id" element={<Error/>} />
         </Routes>
  
       </Router>
