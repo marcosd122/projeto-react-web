@@ -37,3 +37,10 @@
     color: var(--color-white);
     border-color: var(--color-white);
   }
+
+  .form-error {
+    display: block;
+    color: red;
+    font-size: 0.9em;
+    font-weight: 600;
+  }

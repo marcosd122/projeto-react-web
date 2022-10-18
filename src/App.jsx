@@ -14,7 +14,7 @@ import Contatos from "./components/contatos/Contatos";
 import Footer from "./components/footer/Footer";
 import Login from "./components/login/Login";
 import Acervo from "./components/acervo/Acervo";
-import Error from "./components/error/Error";
+// import Error from "./components/error/Error";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 import {
@@ -59,7 +59,7 @@ const App = () => {
           <Route exact path="/" element={<Footer />} />
         </Routes>
         <Routes>
-          <Route path='/acesso' element={<Login />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
 
         <Routes>
@@ -67,7 +67,7 @@ const App = () => {
         </Routes>
 
         <Routes>
-        <Route exact path="/:id" element={<Error/>} />
+        
         </Routes>
  
       </Router>

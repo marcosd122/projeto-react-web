@@ -2,7 +2,6 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line
 
-
 import React, {useEffect, useState} from "react";
 import * as Componente from "./Componente.jsx";
 import "./login.css";
@@ -12,7 +11,6 @@ import { FaFacebookF } from "react-icons/fa";
 import { BsGoogle } from "react-icons/bs";
 import { IoLogoTwitter } from "react-icons/io";
 import Axios from 'axios'
-
 
 function Login() {
   
@@ -177,6 +175,5 @@ export default Login;
 
 É um cliente HTTP baseado em Promises para fazer requisições.
 Pode ser utilizado tanto no navegador quanto no Node. js ou qualquer serviço de API.
-
 
 */

@@ -9,6 +9,8 @@ const session = require("express-session");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
+const jwt = require('jwt')
+
 const app = express();
 
 app.use(express.json());

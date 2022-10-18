@@ -51,7 +51,7 @@ const Biblioteca= () => {
             <div className="biblioteca__item-cta">
          
 
-            <Link to='/acesso' className='btn' >Biblioteca</Link>
+            <Link to='/login' className='btn' >Biblioteca</Link>
 
             {/* <a href={item.biblioteca} className='btn'  target='_blank'>Biblioteca</a> */}
             
