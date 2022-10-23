@@ -8,13 +8,19 @@
   overflow: hidden;
 }
 
+.error_link__container {
+  margin-top: 41rem;
+  align-content: center;
+  position: center;
+}
+
 .error {
   background: linear-gradient(var(--color-primary), transparent);
   width: 32rem;
   height: 38rem;
   position: absolute;
   left: calc(50% - 15rem);
-  margin-top: 4rem;
+  margin-top: 2rem;
   border-radius: 12rem 12rem 2rem 2rem; /* 250px / 30px em medida absoluta*/
   overflow: hidden;
   padding: 6rem 1.5rem 1.5rem 1.5rem;
@@ -22,6 +28,8 @@
   border-width: 0.1rem;
   border-color: var(--color-light);  
 }
+
+
 
 
 

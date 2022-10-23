@@ -2,170 +2,152 @@
 /* eslint-disable no-undef */
 // eslint-disable-next-line
 
-import React, {useEffect, useState} from "react";
-import * as Componente from "./Componente.jsx";
-import "./login.css";
+import React from "react";
+import {
+  Container,
+  InscreverSeContainer,
+  Form,
+  Titulo,
+  Input,
+  Button,
+  EntrarContainer,
+  Anchor,
+  OverlayContainer,
+  Overlay,
+  LeftOverlayPanel,
+  RightOverlayPanel,
+  Paragraph,
+  GhostButton,
+} from "./Componente";
+import "./forms.css";
 import { Link } from "react-router-dom";
 import { IoMdArrowBack } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa";
-import { BsGoogle } from "react-icons/bs";
-import { IoLogoTwitter } from "react-icons/io";
-import Axios from 'axios'
+import { BsGoogle, BsGithub } from "react-icons/bs";
 
-function Login() {
-  
+export default function Login() {
+
   const [entrar, toggle] = React.useState(true);
 
-  const [UsuarioNomeReg, setUsuarioNomeReg] = useState('')
-  const [UsuarioEmailReg, setUsuarioEmailReg] = useState('')
-  const [UsuarioSenhaReg, setUsuarioSenhaReg] = useState('')
 
-  const [UsuarioNomeLog, setUsuarioNomeLog] = useState('')
-  const [UsuarioEmailLog, setUsuarioEmailLog] = useState('')
-  const [UsuarioSenhaLog, setUsuarioSenhaLog] = useState('')
+      return (
+        <div className="container__login">
+          <Container >
+            <InscreverSeContainer Conectar={entrar} >
+              <Form>
+                <Titulo>Criar uma conta</Titulo>
 
-  const [loginStatus, setLoginStatus] = useState('')
+                <Input
+                  type="text"
+                  placeholder="Nome"             
+                />
 
-  // Axios.default.withCredentials = true;
+                <Input
+                  type="text"
+                  placeholder="Sobrenome"                
+                />
 
-  const registro = () => {
-    Axios.post('http://localhost:3001/registro', {
-      usuarioNome: UsuarioNomeReg,
-      usuarioEmail: UsuarioEmailReg,
-      usuarioSenha: UsuarioSenhaReg,
-    }).then((response) => {
-      console.log(response)
-    })   
-  }
+                <Input
+                  type="email"
+                  placeholder="E-mail"                
+                />
 
-  const login = () => {
-    Axios.post('http://localhost:3001/login', {      
-      usuarioNome: UsuarioNomeLog,
-      usuarioEmail: UsuarioEmailLog,
-      usuarioSenha: UsuarioSenhaLog,
-    }).then((response) => {
+                <Input  type="password" placeholder="Password"/>
 
-      if (response.data.message) {
-      setLoginStatus(response.data.message)
-    } else {
-      setLoginStatus(response.data[0].usuarioNome)
-    }
-    })   
-  }
+                
+                <Button>Inscrever-se</Button>
 
-  useEffect (() => {
-    Axios.get('http://localhost:3001/login').then((response) => {
-    if (response.data.logado === true) {
-      setLoginStatus(response.data.usuarioNome[0].usuarioNome)
-    }
-  })
-  }, [])
+                <div class="login_midias_sociais">
+                  <a href="# " class="login_midias_sociais-icon">
+                    <i class="fab fa-facebook-f">
+                      <FaFacebookF />
+                    </i>
+                  </a>
+                  <a href="# " class="login_midias_sociais-icon">
+                    <i class="fab fa-google">
+                      <BsGoogle />
+                    </i>
+                  </a>
+                  <a href="# " class="login_midias_sociais-icon">
+                    <i class="fab fa-linkedin-in">
+                      <BsGithub />
+                    </i>
+                  </a>
+                </div>
+              </Form>
+              
+            </InscreverSeContainer>
 
-  return (
+            <EntrarContainer Conectar={entrar} >
+              <Form>
+                <Titulo>Entrar</Titulo>
 
-    <div className="container__login">
+                <Input type="email" placeholder="E-mail" name="email"
+						/>
 
-      <Componente.Container>
-      
-        <Componente.Inscrever_se_Container Conectar={entrar}>
-        
-          <Componente.Form>
+                <Input type="password" placeholder="Senha"/>
 
-            <Componente.Titulo>Criar uma conta</Componente.Titulo>
 
-            <Componente.Input type="nome" onChange={(e) => {
-              setUsuarioNomeReg(e.target.value) }} placeholder="Nome" />
-            <Componente.Input type="email" onChange={(e) => {
-              setUsuarioEmailReg(e.target.value) }} placeholder="E-mail" />
-            <Componente.Input type="password" onChange={(e) => {
-              setUsuarioSenhaReg(e.target.value) }} placeholder="Senha" />                       
+                <Button >Entrar</Button>
 
-            <Componente.Button onClick={registro}>Inscrever-se</Componente.Button>
+                <Anchor href="# ">Esqueceu sua senha?</Anchor>
+
+                <div class="login_midias_sociais">
+                  <a href="# " class="login_midias_sociais-icon">
+                    <i class="fab fa-facebook-f">
+                      <FaFacebookF />
+                    </i>
+                  </a>
+                  <a href="# " class="login_midias_sociais-icon">
+                    <i class="fab fa-google">
+                      <BsGoogle />
+                    </i>
+                  </a>
+                  <a href="# " class="login_midias_sociais-icon">
+                    <i class="fab fa-linkedin-in">
+                      <BsGithub />
+                    </i>
+                  </a>
+                </div>
+              </Form>
+            </EntrarContainer>
+
+            <OverlayContainer Conectar={entrar}>
+              <Overlay Conectar={entrar}>
+                <LeftOverlayPanel Conectar={entrar}>                
+                  <Titulo>Bem vindo de volta!</Titulo>
+                  <Paragraph>
+                    Para se manter conectado conosco, faça login com suas
+                    informações pessoais
+                  </Paragraph>
+                  <GhostButton onClick={() => toggle(true)}>Entrar</GhostButton>
+                </LeftOverlayPanel>
+
+                <RightOverlayPanel Conectar={entrar}>
+                  <Titulo>Olá amigo!</Titulo>
+                  <Paragraph>
+                    Insira seus dados pessoais e comece a jornada conosco
+                  </Paragraph>
+                  <GhostButton onClick={() => toggle(false)}>
+                    Inscreva-se
+                  </GhostButton>
+                </RightOverlayPanel>
+              </Overlay>
+            </OverlayContainer>
             
+          </Container>
+          
 
-            <div class="login_midias_sociais">
-              <a href="# " class="login_midias_sociais-icon">
-                <i class="fab fa-facebook-f"><FaFacebookF /></i>
-              </a>
-              <a href="# " class="login_midias_sociais-icon">
-                <i class="fab fa-google"><BsGoogle /></i>
-              </a>
-              <a href="# " class="login_midias_sociais-icon">
-                <i class="fab fa-linkedin-in"><IoLogoTwitter /></i>
-              </a>
-            </div>
-        
+          <div className="container_link__container">
+            <Link to={"/app"} className="btn">
+              <IoMdArrowBack />
+            </Link>
+          </div>
+        </div>
+      );
+    };
+ 
 
-          </Componente.Form>
-        </Componente.Inscrever_se_Container>
-
-        <Componente.EntrarContainer Conectar={entrar}>
-          <Componente.Form>
-            <Componente.Titulo>Entrar</Componente.Titulo>
-            <Componente.Input type="nome" onChange={(e) => {
-              setUsuarioNomeLog(e.target.value) }} placeholder="Nome" />
-            <Componente.Input type="email" placeholder="E-mail" 
-            onChange={(e) => {setUsuarioEmailLog(e.target.value)}}/>
-            <Componente.Input type="password" placeholder="Senha" 
-            onChange={(e) => {setUsuarioSenhaLog(e.target.value)}}/>        
-
-            <Componente.Button onClick={login}  >Entrar</Componente.Button>
-
-            <Componente.Anchor href="# ">Esqueceu sua senha?</Componente.Anchor>
-
-            <div class="login_midias_sociais">
-              <a href="# " class="login_midias_sociais-icon">
-                <i class="fab fa-facebook-f"><FaFacebookF /></i>
-              </a>
-              <a href="# " class="login_midias_sociais-icon">
-                <i class="fab fa-google"><BsGoogle /></i>
-              </a>
-              <a href="# " class="login_midias_sociais-icon">                
-                <i class="fab fa-linkedin-in"><IoLogoTwitter /></i>
-              </a>
-            </div>
-
-          </Componente.Form>
-        </Componente.EntrarContainer>
-
-        <Componente.OverlayContainer Conectar={entrar}>
-          <Componente.Overlay Conectar={entrar}>
-            <Componente.LeftOverlayPanel Conectar={entrar}>
-              <Componente.Titulo>Bem vindo de volta!</Componente.Titulo>
-              <Componente.Paragraph>
-                Para se manter conectado conosco, faça login com suas
-                informações pessoais
-              </Componente.Paragraph>
-              <Componente.GhostButton onClick={() => toggle(true)}>
-                Entrar
-              </Componente.GhostButton>
-            </Componente.LeftOverlayPanel>
-
-            <Componente.RightOverlayPanel Conectar={entrar}>
-              <Componente.Titulo>Olá amigo!</Componente.Titulo>
-              <Componente.Paragraph>
-                Insira seus dados pessoais e comece a jornada conosco
-              </Componente.Paragraph>
-              <Componente.GhostButton onClick={() => toggle(false)}>
-                Inscreva-se
-              </Componente.GhostButton>
-            </Componente.RightOverlayPanel>
-          </Componente.Overlay>
-        </Componente.OverlayContainer>
-      </Componente.Container>
-
-      <div className="container_link__container">
-        <Link to={"/"} className="btn"><IoMdArrowBack /></Link>
-
-      </div>
-
-      <h1>{loginStatus}</h1>
-
-    </div>
-  );
-}
-
-export default Login;
 
 /*
 

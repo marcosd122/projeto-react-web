@@ -8,10 +8,10 @@ import styled from 'styled-components';
  overflow: hidden;
  width: 650px;
  max-width: 100%;
- min-height: 530px;
+ min-height: 620px;
  `;
 
- export const Inscrever_se_Container = styled.div`
+ export const InscreverSeContainer = styled.div`
   position: absolute;
   top: 0;
   height: 100%;
@@ -37,7 +37,7 @@ import styled from 'styled-components';
  left: 0;
  width: 50%;
  z-index: 2;
- ${props => (props.Conectar !== true ? `transform: translateX(100%);` : null)}
+ ${props => (props.Conectar !== true ? `transform: translateX(100%);` : null ) } 
  `;
  
  export const Form = styled.form`

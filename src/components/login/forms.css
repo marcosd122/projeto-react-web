@@ -1,0 +1,57 @@
+.container__login {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    height: 85vh;
+    margin: -20px 0 50px;
+  }
+
+
+  .container_link__container {
+    margin-top: 1rem;
+  }
+
+  .login_midias_sociais {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login_midias_sociais-icon {
+    height: 46px;
+    width: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.45rem;
+    color: #333;
+    border-radius: 50%;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+  }
+  
+  .login_midias_sociais-icon:hover {
+    color: var(--color-white);
+    border-color: var(--color-white);
+  }
+
+  .loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

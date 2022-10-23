@@ -1,102 +1,24 @@
+require("dotenv").config();
 const express = require("express");
-const mysql = require("mysql");
+const app = express();
 const cors = require("cors");
 
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
-const session = require("express-session");
+const connection = require("./db");
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
 
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
+// Conexão com o banco de dados
+connection();
 
-const jwt = require('jwt')
-
-const app = express();
-
+// meio-termo
 app.use(express.json());
-app.use(cors({
-    origin: ["http://localhost:3000"],
-    method: ["GET", "POST"],
-    credentials: true,
-}));
+app.use(cors());
 
-app.use(cookieParser())
-app.use(bodyParser.urlencoded({extended: true}));
+// rotas
+app.use("/api/users", userRoutes);
+app.use("/api/auth", authRoutes);
 
-app.use(session({
-    key: "userId",
-    secret: "userSecret",
-    resave: false,
-    saveUninitialized: false,
-    cookie: { expires: 60 * 60 * 24 }
-}));
+const port = process.env.PORT || 8080;
+app.listen(port, console.log(`Rodando na porta ${port}...`));
 
-const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "Guimaraes2",
-  database: "db",
-});
-
-app.post("/registro", (req, res) => {
-  const usuarioNome = req.body.usuarioNome;
-  const usuarioEmail = req.body.usuarioEmail;
-  const usuarioSenha = req.body.usuarioSenha;
-
-  bcrypt.hash(usuarioSenha, saltRounds, (err, hash) => {
-    if (err) {
-      console.log(err);
-    }
-
-    db.query(
-      "INSERT INTO cadastro (usuarioNome, usuarioEmail, usuarioSenha) VALUES (?, ?, ?)",
-      [usuarioNome, usuarioEmail, hash],
-      (err, result) => {
-        console.log(err);
-      }
-    );
-  });
-});
-
-app.get('/login', (req, res) => {
-  if (req.session.user) {
-    res.send ({logado: true, user: req.session.user})
-  } else {
-    res.send({logado: false})
-  }
-})
-
-app.post("/login", (req, res) => {
-  const usuarioNome = req.body.usuarioNome;
-  const usuarioEmail = req.body.usuarioEmail;
-  const usuarioSenha = req.body.usuarioSenha;
-
-  db.query(
-    "SELECT * FROM cadastro WHERE usuarioNome = ?, usuarioEmail = ?;",
-    usuarioNome, usuarioEmail,
-    (err, result) => {
-      if (err) {
-        res.send({ err: err });
-      }
-      if (result.length > 0) {
-        bcrypt.compare(usuarioSenha, result[0].usuarioSenha, (err, response) => {
-            if (response) {
-                req.session.user = result
-                console.log(req.session.user)
-                res.send(result)                
-            } else {
-                res.send({ message: "E-mail ou senha incorreta!!" });  
-            }
-        })
-      } else {
-        res.send({ message: "Usuário não existe" });
-      }
-    }
-  );
-});
-
-//Parâmetros de função
-
-app.listen(3001, () => {
-  console.log("Rodando na porta 3001");
-});
+// MERN - MONGODB - EXPRESS - REACT - NODE
