@@ -1,8 +1,13 @@
-import ReactDOM from 'react-dom'
-import React from 'react'
-import { MyRoute } from './routes/Routes';
-import './index.css'
+import ReactDOM from "react-dom";
+import React from "react";
+import { MyRoute } from "./routes/Routes";
+import "./index.css";
 
+ReactDOM.render(
 
-ReactDOM.render(<MyRoute/>, document.querySelector("#root"));
+  <React.StrictMode>
+    <MyRoute />,
+  </React.StrictMode>,
 
+  document.querySelector("#root")
+);

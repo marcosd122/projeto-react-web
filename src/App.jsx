@@ -18,6 +18,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 const App = () => {
   return (
     <>
+             
       <Header />
       <Nav />
       <Sobre />
@@ -26,7 +27,8 @@ const App = () => {
       <Biblioteca />
       <Depoimentos />
       <Contatos />
-      <Footer />      
+      <Footer />  
+
     </>
   );
 };

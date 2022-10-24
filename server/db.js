@@ -1,4 +1,7 @@
 const mongoose = require("mongoose");
+const mongodbUri = require('mongodb-uri')
+let mongooseUri = mongodbUri.formatMongoose(config.mongo.uri)
+mongoose.connect(mongooseUri, config.mongo.options)
 
 module.exports = () => {
 	const connectionParams = {
