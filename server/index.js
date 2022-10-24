@@ -6,16 +6,16 @@ const connection = require("./db");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 
-// database connection
+// conexão com o banco de dados
 connection();
 
-// middlewares
+// meio-termo
 app.use(express.json());
 app.use(cors());
 
-// routes
+// rotas
 app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 
-const port = process.env.PORT || 8080;
-app.listen(port, console.log(`Listening on port ${port}...`));
+const port = process.env.PORT || 8020;
+app.listen(port, console.log(`Rodando na porta ${port}...`));
