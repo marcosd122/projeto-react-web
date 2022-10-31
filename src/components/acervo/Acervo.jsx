@@ -1,23 +1,37 @@
 import React from 'react'
-import styles from "./styles.acervo.css";
+import { useEffect } from "react"
+import { useNavigate } from 'react-router-dom'
+import './acervo.css'
 
-const Acervo = () => {
+
+
+function Acervo() {
+
+   
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const token = localStorage.getItem('TOKEN')
+        if (!token) {
+            navigate('/login')
+        }
+    }, [])
+
+    return (
+        <div className="card">
+            
+            <div>
+                <span> {localStorage.getItem('EMAIL')} </span>
+                <button className="btn" onClick={() => {localStorage.clear()
+                navigate('/') }}
+                > Sair </button>
+            </div>
+
     
-	const handleLogout = () => {
-		localStorage.removeItem("token");
-		window.location.reload();
-	};
 
-	return (
-		<div className={styles.main_container}>
-			<nav className={styles.navbar}>
-				<h1>fakebook</h1>
-				<button className={styles.white_btn} onClick={handleLogout}>
-					Logout
-				</button>
-			</nav>
-		</div>
-	);
-};
+        </div>
+    )
+}
 
-export default Acervo;
+
+export default Acervo

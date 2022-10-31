@@ -1,13 +1,14 @@
-import ReactDOM from "react-dom";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import React from "react";
 import { MyRoute } from "./routes/Routes";
 import "./index.css";
 
-ReactDOM.render(
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
 
-  <React.StrictMode>
-    <MyRoute />,
-  </React.StrictMode>,
-
-  document.querySelector("#root")
+root.render(
+  <StrictMode>
+    <MyRoute />
+  </StrictMode>
 );

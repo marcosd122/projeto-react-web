@@ -3,8 +3,11 @@
         "adipisicing",
         "Aliquid",
         "amet",
+        "Authtoken",
         "AVTR",
         "conteudo",
+        "cooki",
+        "cpassword",
         "Debitis",
         "deleniti",
         "descricao",
@@ -20,6 +23,7 @@
         "Jfcef",
         "Jfmajran",
         "JWTPRIVATEKEY",
+        "keysecret",
         "laboriosam",
         "linkedin",
         "Linkedin",
@@ -39,10 +43,12 @@
         "Swiper",
         "swiperjs",
         "tempdata",
+        "userdb",
         "useremail",
         "Useremail",
         "usuario",
         "Usuarionome",
+        "verifytoken",
         "Whatsapp"
     ]
 }
