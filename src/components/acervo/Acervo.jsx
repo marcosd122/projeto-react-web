@@ -18,7 +18,7 @@ function Acervo() {
     }, [])
 
     return (
-        <div className="card">
+        <div className="card_container">
             
             <div>
                 <span> {localStorage.getItem('EMAIL')} </span>
